@@ -1,4 +1,4 @@
-<p>Link down cac file còn lại :https://drive.google.com/drive/folders/1khyVtIZ5_I-858RiicxKtMFCV3NsPbQw?usp=sharing<p>
+<p>Link down cac file còn lại: https://drive.google.com/drive/folders/1ObQgftS4kPV0G6PHzK8JMMp9EOCoPhe6?usp=sharing<p>
 <p>Máy cần cài docker sau đó:<p>
 <p>Chạy các lệnh sau:<p>
   <p>docker build -t numberplate_image .<p>
