@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  python-numberplate-app:
+    image: numberplate_image
+    container_name: numberplate_container
+    ports:
+      - "8889:8885"
+    depends_on:
+      - python-mysql-container
+    networks:
+      - longnet
+
+  python-mysql-container:
+    image: mysql
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=users
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=1234
+    volumes:
+      - mysql-python-app-volume:/var/lib/mysql
+      - mysql-python-app-volume-config:/etc/mysql
+    ports:
+      - "13306:3306"
+    networks:
+      - longnet
+
+networks:
+  longnet:
+    name: longnet
+
+volumes:
+  mysql-python-app-volume:
+  mysql-python-app-volume-config:
+
+
